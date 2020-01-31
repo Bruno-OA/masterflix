@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Filmes</title>
+</head>
+<body>
+<h1>Cadastrado com sucesso. Veja a lista de filmes!</h1>
+
+<div th:each="filme : ${filmes}">
+    <div>
+        <p><strong>Nome:</strong>
+            <a th:href="@{'/filme/' + ${filme.nome}}">
+                <span th:text="${filme.nome}"></span>
+            </a>
+        </p>
+
+        <br>
+            <img th:src="${filme.imagem}" width="50%">
+        <br>
+
+        <p><strong>Nome: </strong> <span th:text="${filme.nome}"></span></p>
+        <p><strong>Sinopse: </strong> <span th:text="${filme.sinopse}"></span></p>
+        <p><strong>Genero: </strong> <span th:text="${filme.genero}"></span></p>
+        <p><strong>Duração: </strong> <span th:text="${filme.duracao}"></span></p>
+        <p><strong>Data de Lançamento:</strong> <span th:text="${filme.dataLancamento}"></span></p>
+        <p><strong>Data de Criação</strong> <span th:text="${filme.dataCriacao}"></span></p>
+        <hr>
+
+    </div>
+</div>
+</body>
+</html>

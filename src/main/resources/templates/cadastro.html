@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro</title>
+</head>
+<body>
+<h1>Bem-Vindo ao Cadastro de Filmes</h1>
+<p>Cadastre seu Filme</p>
+
+<form action="cadastrar" method="POST">
+
+    <label>Nome: </label>
+    <input type="text" name="nome"> <br><br>
+
+    <label>Sinopse: </label>
+    <textarea name="sinopse" id="" cols="30" rows="10"></textarea><br>
+
+    <label>link imagem: </label>
+    <input type="text" name="imagem"><br><br>
+
+    <label>Genero: </label>
+    <select name="genero">
+        <option value="acao">Ação</option>
+        <option value="terror">Terror</option>
+        <option value="documentario">Documentario</option>
+        <option value="corrida">Corrida</option>
+    </select><br>
+
+    <label>Duração: </label>
+    <input type="text" name="duracao"> <br><br>
+
+    <label>Data de Lançamento: </label>
+    <input type="text" name="dataLancamento"><br>
+
+
+    <button>Cadastrar</button>
+</form>
+
+</body>
+</html>
